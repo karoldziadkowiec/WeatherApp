@@ -10,10 +10,10 @@ Technologies used in the project:
   - LINQ Queries
   - Repository pattern
   - Json.NET
+- **React**
+  - JavaScript
 - **Entity Framework Core**
 - **Microsoft SQL Server**
 - API testing:
   - **Swagger UI**
   - **Postman**
-- **React**
-  - JavaScript
