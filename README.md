@@ -1,4 +1,4 @@
-# WeatherApp
+# WeatherApp (in development)
 
 The project is a web application for checking the current weather. It enables users of the website to check current weather conditions for a selected city in the world. The application downloads weather data from an external API.
 
@@ -12,8 +12,14 @@ Technologies used in the project:
   - Json.NET
 - **React**
   - JavaScript
-- **Entity Framework Core**
-- **Microsoft SQL Server**
+  - Hooks
+  - Multithreading (async/await)
 - API testing:
   - **Swagger UI**
   - **Postman**
+
+Planned technologies to be added:
+- ORM: **Entity Framework Core**
+  - Migrations
+- Database: **Microsoft SQL Server**
+- Unit tests: **xUnit**
