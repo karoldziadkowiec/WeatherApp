@@ -8,7 +8,7 @@ Technologies used in the project:
 - **C#**
   - Multithreading (async/await)
   - LINQ Queries
-  - Repository pattern
+  - Repository and DTOs pattern
   - Json.NET
 - **React**
   - JavaScript
