@@ -31,6 +31,14 @@ namespace WeatherApp
                 app.UseSwaggerUI();
             }
 
+            // Allow CORS
+            app.UseCors(policy =>
+            {
+                policy.AllowAnyOrigin();
+                policy.AllowAnyHeader();
+                policy.AllowAnyMethod();
+            });
+
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
