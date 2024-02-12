@@ -12,14 +12,17 @@ Technologies used in the project:
   - Json.NET
 - **React**
   - JavaScript
+  - HTML
+  - CSS
   - Hooks
   - Multithreading (async/await)
 - API testing:
   - **Swagger UI**
   - **Postman**
 
-Planned technologies to be added:
+Technologies in development phase:
 - ORM: **Entity Framework Core**
   - Migrations
 - Database: **Microsoft SQL Server**
+- React Bootstrap
 - Unit tests: **xUnit**
