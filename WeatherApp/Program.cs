@@ -15,6 +15,7 @@ namespace WeatherApp
             builder.Services.AddDbContext<AppDbContext>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("connection")));
             builder.Services.AddScoped<IWeatherRepository, WeatherRepository>();
+            builder.Services.AddHttpClient(); // IHttpClientFactory registration
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
