@@ -24,5 +24,5 @@ Technologies in development phase:
 - ORM: **Entity Framework Core**
   - Migrations
 - Database: **Microsoft SQL Server**
-- React Bootstrap
+- **React Bootstrap**
 - Unit tests: **xUnit**
