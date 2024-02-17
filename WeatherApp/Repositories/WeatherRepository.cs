@@ -1,4 +1,5 @@
-﻿using WeatherApp.Database;
+﻿using Microsoft.Extensions.Configuration;
+using WeatherApp.Database;
 using WeatherApp.Models.DTOs;
 
 namespace WeatherApp.Repositories
@@ -7,12 +8,14 @@ namespace WeatherApp.Repositories
     {
         private readonly AppDbContext _context;
         private readonly IHttpClientFactory _httpClientFactory;
-        private readonly string apiKey = "4d4289c27ffcad62f57690fde18d279c";
+        private readonly string apiKey;
 
-        public WeatherRepository(AppDbContext context, IHttpClientFactory httpClientFactory)
+
+        public WeatherRepository(AppDbContext context, IHttpClientFactory httpClientFactory, IConfiguration configuration)
         {
             _context = context;
             _httpClientFactory = httpClientFactory;
+            apiKey = configuration.GetValue<string>("AppSettings:ApiKey");
         }
 
         public async Task<WeatherDTO> GetWeather(string city)
