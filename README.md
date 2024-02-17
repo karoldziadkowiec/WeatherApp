@@ -16,7 +16,7 @@ Technologies used in the project:
   - CSS
   - Hooks
   - Multithreading (async/await)
-- API testing:
+- API testing by:
   - **Swagger UI**
   - **Postman**
 
