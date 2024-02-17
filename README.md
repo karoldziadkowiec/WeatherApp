@@ -10,7 +10,7 @@ Technologies used in the project:
   - Multithreading (async/await)
   - LINQ Queries
   - Repository and DTOs pattern
-  - Configuration Management with AppSettings
+  - Configuration Management with AppSettings (to read Api Key)
 - **React**
   - JavaScript
   - HTML
