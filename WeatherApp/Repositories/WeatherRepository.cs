@@ -1,5 +1,5 @@
 ﻿using WeatherApp.Database;
-using WeatherApp.DTOs;
+using WeatherApp.Models.DTOs;
 
 namespace WeatherApp.Repositories
 {
@@ -7,7 +7,7 @@ namespace WeatherApp.Repositories
     {
         private readonly AppDbContext _context;
         private readonly IHttpClientFactory _httpClientFactory;
-        private readonly string _apiKey = "4d4289c27ffcad62f57690fde18d279c";
+        private readonly string apiKey = "4d4289c27ffcad62f57690fde18d279c";
 
         public WeatherRepository(AppDbContext context, IHttpClientFactory httpClientFactory)
         {
@@ -20,7 +20,7 @@ namespace WeatherApp.Repositories
             try
             {
                 var client = _httpClientFactory.CreateClient();
-                var response = await client.GetAsync($"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={_apiKey}&units=metric");
+                var response = await client.GetAsync($"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={apiKey}&units=metric");
                 response.EnsureSuccessStatusCode();
                 return await response.Content.ReadFromJsonAsync<WeatherDTO>();
             }

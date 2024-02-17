@@ -6,7 +6,6 @@ namespace WeatherApp.Database
     {
         public AppDbContext(DbContextOptions options) : base(options)
         {
-
         }
 
 

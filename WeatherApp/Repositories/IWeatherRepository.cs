@@ -1,4 +1,4 @@
-﻿using WeatherApp.DTOs;
+﻿using WeatherApp.Models.DTOs;
 
 namespace WeatherApp.Repositories
 {

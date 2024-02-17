@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 
-function App() {
+const App = () => {
   const [city, setCity] = useState('');
   const [temperature, setTemperature] = useState('');
   const [error, setError] = useState('');
