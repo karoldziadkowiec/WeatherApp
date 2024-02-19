@@ -11,6 +11,7 @@ const AppNavbar = () => {
           <Navbar.Brand as={Link} to="/">WeatherApp</Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link as={Link} to="/">Weather</Nav.Link>
+            <Nav.Link as={Link} to="/sun">Sun info</Nav.Link>
             <Nav.Link as={Link} to="/history">History</Nav.Link>
             <Nav.Link as={Link} to="/saved">Saved</Nav.Link>
           </Nav>
