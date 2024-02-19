@@ -6,10 +6,11 @@ Technologies used in the project:
 - **ASP.NET Core Web API**
   - REST API
 - **C#**
+  - Json.NET
   - Multithreading (async/await)
   - LINQ Queries
   - Repository and DTOs pattern
-  - Json.NET
+  - Configuration Management with AppSettings (to read Api Key)
 - **React**
   - JavaScript
   - HTML
