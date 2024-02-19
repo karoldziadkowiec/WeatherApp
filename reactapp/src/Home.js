@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 
-const App = () => {
+const Home = () => {
   const [city, setCity] = useState('');
   const [temperature, setTemperature] = useState('');
   const [error, setError] = useState('');
@@ -40,4 +40,4 @@ const App = () => {
   );
 }
 
-export default App;
+export default Home;
