@@ -3,7 +3,8 @@
 The project is a web application for checking the current weather. It enables users of the website to search current weather conditions for a selected city in the world. The application downloads weather data from an external API: https://openweathermap.org.
 
 Technologies used in the project:
-- **ASP.NET Core Web API**
+b a c k e n d:
+- Framework: **ASP.NET Core Web API**
   - REST API
 - **C#**
   - Json.NET
@@ -16,6 +17,10 @@ Technologies used in the project:
   - Migrations
 - Database: **Microsoft SQL Server**
 - Unit tests: **xUnit**
+- API testing by:
+  - **Swagger UI**
+  - **Postman**
+f r o n t e n d:
 - **React**
   - JavaScript
   - HTML
@@ -24,9 +29,6 @@ Technologies used in the project:
   - React Router
   - Hooks
   - Multithreading (async/await)
-- API testing by:
-  - **Swagger UI**
-  - **Postman**
 
 Home page:
 
