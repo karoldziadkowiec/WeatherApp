@@ -35,7 +35,7 @@ Home page:
 
 ![Home page](https://github.com/karoldziadkowiec/WeatherApp/blob/master/github-images/1.png)
 
-Searched weather:
+Searched weather for Los Angeles:
 
 ![Searched weather](https://github.com/karoldziadkowiec/WeatherApp/blob/master/github-images/2.png)
 
@@ -43,7 +43,7 @@ Sun info page:
 
 ![Sun info page](https://github.com/karoldziadkowiec/WeatherApp/blob/master/github-images/3.png)
 
-Searched sun information:
+Searched sun information for Los Angeles:
 
 ![Searched sun information](https://github.com/karoldziadkowiec/WeatherApp/blob/master/github-images/4.png)
 
@@ -51,7 +51,7 @@ History page:
 
 ![History page](https://github.com/karoldziadkowiec/WeatherApp/blob/master/github-images/5.png)
 
-Weather details:
+Weather details for Los Angeles:
 
 ![Weather details](https://github.com/karoldziadkowiec/WeatherApp/blob/master/github-images/6.png)
 
@@ -59,7 +59,7 @@ History page after searching by city name:
 
 ![History page2](https://github.com/karoldziadkowiec/WeatherApp/blob/master/github-images/7.png)
 
-Printing history data to Excel file by ClosedXML:
+Printed history data in Excel file using ClosedXML:
 
 ![Printed history data](https://github.com/karoldziadkowiec/WeatherApp/blob/master/github-images/8.png)
 
@@ -71,7 +71,7 @@ Saved page:
 
 ![Saved page](https://github.com/karoldziadkowiec/WeatherApp/blob/master/github-images/10.png)
 
-Printing saved weather data to Excel file by ClosedXML:
+Printed saved weather data in Excel file using ClosedXML:
 
 ![Printing saved weather data](https://github.com/karoldziadkowiec/WeatherApp/blob/master/github-images/11.png)
 
@@ -79,6 +79,6 @@ Mobile version:
 
 ![Mobile version](https://github.com/karoldziadkowiec/WeatherApp/blob/master/github-images/11.2.png)
 
-Unit testing by xUnit:
+Unit testing using xUnit:
 
 ![Unit testing](https://github.com/karoldziadkowiec/WeatherApp/blob/master/github-images/12.png)
