@@ -15,6 +15,7 @@ Technologies used in the project:
 - ORM: **Entity Framework Core**
   - Migrations
 - Database: **Microsoft SQL Server**
+- Unit tests: **xUnit**
 - **React**
   - JavaScript
   - HTML
@@ -26,9 +27,6 @@ Technologies used in the project:
 - API testing by:
   - **Swagger UI**
   - **Postman**
-
-Technologies in development phase:
-- Unit tests: **xUnit**
 
 Home page:
 
