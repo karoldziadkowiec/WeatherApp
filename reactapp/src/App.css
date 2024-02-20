@@ -43,3 +43,7 @@ body {
     transform: rotate(360deg);
   }
 }
+
+.centered-content {
+  margin-top: 7%;
+}
