@@ -144,7 +144,7 @@ const Saved = () => {
               <div>
                 <img src={`http://openweathermap.org/img/w/${selectedSavedItem.icon}.png`} alt="Weather Icon" />
                 <b>{selectedSavedItem.temperature}°C</b>
-                <p>Description: <b>{selectedSavedItem.title} - {selectedSavedItem.description}</b></p>
+                <p>Weather: <b>{selectedSavedItem.title} - {selectedSavedItem.description}</b></p>
                 <p>Pressure: <b>{selectedSavedItem.pressure} hPa</b></p>
                 <p>Humidity: <b>{selectedSavedItem.humidity}%</b></p>
                 <p>Wind Speed: <b>{selectedSavedItem.windSpeed} m/s</b></p>

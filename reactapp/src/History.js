@@ -170,7 +170,7 @@ const History = () => {
               <div>
                 <img src={`http://openweathermap.org/img/w/${selectedHistoryItem.icon}.png`} alt="Weather Icon" />
                 <b>{selectedHistoryItem.temperature}°C</b>
-                <p>Description: <b>{selectedHistoryItem.title} - {selectedHistoryItem.description}</b></p>
+                <p>Weather: <b>{selectedHistoryItem.title} - {selectedHistoryItem.description}</b></p>
                 <p>Pressure: <b>{selectedHistoryItem.pressure} hPa</b></p>
                 <p>Humidity: <b>{selectedHistoryItem.humidity}%</b></p>
                 <p>Wind Speed: <b>{selectedHistoryItem.windSpeed} m/s</b></p>
