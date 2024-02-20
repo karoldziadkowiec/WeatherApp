@@ -27,3 +27,11 @@ Technologies in development phase:
 - Database: **Microsoft SQL Server**
 - **React Bootstrap**
 - Unit tests: **xUnit**
+
+Home page:
+
+![Home page](https://github.com/karoldziadkowiec/WeatherApp/blob/master/github-images/1.png)
+
+Sun Info page:
+
+![Sun Info page](https://github.com/karoldziadkowiec/WeatherApp/blob/master/github-images/2.png)
