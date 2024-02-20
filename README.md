@@ -3,34 +3,32 @@
 The project is a web application for checking the current weather. It enables users of the website to search current weather conditions for a selected city in the world. The searched weather is automatically added to the database. There is an option to save a specific weather in the search history and to delete the weather later. The application downloads weather data from an external API: https://openweathermap.org.
 
 Technologies used in the project:
-
-b a c k e n d:
-- Framework: **ASP.NET Core Web API**
-  - REST API
-- **C#**
-  - Json.NET
-  - Multithreading (async/await)
-  - LINQ Queries
-  - Repository and DTOs pattern
-  - Configuration Management with AppSettings (to read Api Key)
-  - ClosedXML
-- ORM: **Entity Framework Core**
-  - Migrations
-- Database: **Microsoft SQL Server**
-- Unit tests: **xUnit**
-- API testing by:
-  - **Swagger UI**
-  - **Postman**
-
-f r o n t e n d:
-- **React**
-  - JavaScript
-  - HTML
-  - CSS
-  - React Bootstrap components
-  - React Router
-  - Hooks
-  - Multithreading (async/await)
+- b a c k e n d:
+ - Framework: **ASP.NET Core Web API**
+    - REST API
+  - **C#**
+    - Json.NET
+    - Multithreading (async/await)
+    - LINQ Queries
+    - Repository and DTOs pattern
+    - Configuration Management with AppSettings (to read Api Key)
+    - ClosedXML
+  - ORM: **Entity Framework Core**
+    - Migrations
+  - Database: **Microsoft SQL Server**
+  - Unit tests: **xUnit**
+  - API testing by:
+    - **Swagger UI**
+    - **Postman**
+- f r o n t e n d:
+  - **React**
+    - JavaScript
+    - HTML
+    - CSS
+    - React Bootstrap components
+    - React Router
+    - Hooks
+    - Multithreading (async/await)
 
 Home page:
 
