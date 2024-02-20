@@ -1,8 +1,9 @@
 # WeatherApp (in development)
 
-The project is a web application for checking the current weather. It enables users of the website to search current weather conditions for a selected city in the world. The application downloads weather data from an external API: https://openweathermap.org.
+The project is a web application for checking the current weather. It enables users of the website to search current weather conditions for a selected city in the world. The searched weather is automatically added to the database. There is an option to save a specific weather in the search history and to delete the weather later. The application downloads weather data from an external API: https://openweathermap.org.
 
 Technologies used in the project:
+
 b a c k e n d:
 - Framework: **ASP.NET Core Web API**
   - REST API
@@ -20,6 +21,7 @@ b a c k e n d:
 - API testing by:
   - **Swagger UI**
   - **Postman**
+
 f r o n t e n d:
 - **React**
   - JavaScript
