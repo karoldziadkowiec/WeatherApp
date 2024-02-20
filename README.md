@@ -11,6 +11,7 @@ Technologies used in the project:
   - LINQ Queries
   - Repository and DTOs pattern
   - Configuration Management with AppSettings (to read Api Key)
+  - ClosedXML
 - **React**
   - JavaScript
   - HTML
