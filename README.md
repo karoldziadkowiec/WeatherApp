@@ -15,6 +15,8 @@ Technologies used in the project:
   - JavaScript
   - HTML
   - CSS
+  - React Bootstrap components
+  - React Router
   - Hooks
   - Multithreading (async/await)
 - API testing by:
@@ -25,7 +27,6 @@ Technologies in development phase:
 - ORM: **Entity Framework Core**
   - Migrations
 - Database: **Microsoft SQL Server**
-- **React Bootstrap**
 - Unit tests: **xUnit**
 
 Home page:
