@@ -74,3 +74,7 @@ Saved page:
 Printing saved weather data to Excel file by ClosedXML:
 
 ![Printing saved weather data](https://github.com/karoldziadkowiec/WeatherApp/blob/master/github-images/11.png)
+
+Unit testing by xUnit:
+
+![Unit testing](https://github.com/karoldziadkowiec/WeatherApp/blob/master/github-images/12.png)
