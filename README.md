@@ -1,4 +1,4 @@
-# WeatherApp (in development)
+# WeatherApp
 
 The project is a web application for checking the current weather. It enables users of the website to search current weather conditions for a selected city in the world. The searched weather is automatically added to the database. There is an option to save a specific weather in the search history and to delete the weather later. The application downloads weather data from an external API: https://openweathermap.org.
 
@@ -74,3 +74,7 @@ Saved page:
 Printing saved weather data to Excel file by ClosedXML:
 
 ![Printing saved weather data](https://github.com/karoldziadkowiec/WeatherApp/blob/master/github-images/11.png)
+
+Unit testing by xUnit:
+
+![Unit testing](https://github.com/karoldziadkowiec/WeatherApp/blob/master/github-images/12.png)
