@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using WeatherApp.Models.Entities;
 
 namespace WeatherApp.Database
 {
@@ -8,6 +9,6 @@ namespace WeatherApp.Database
         {
         }
 
-
+        public DbSet<History> History { get; set; }
     }
 }

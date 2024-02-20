@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Configuration;
 using WeatherApp.Database;
 using WeatherApp.Models.DTOs;
+using WeatherApp.Models.Entities;
 
 namespace WeatherApp.Repositories
 {
@@ -25,12 +26,41 @@ namespace WeatherApp.Repositories
                 var client = _httpClientFactory.CreateClient();
                 var response = await client.GetAsync($"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={apiKey}&units=metric");
                 response.EnsureSuccessStatusCode();
-                return await response.Content.ReadFromJsonAsync<WeatherDTO>();
+                var weatherDTO = await response.Content.ReadFromJsonAsync<WeatherDTO>();
+
+                if (weatherDTO != null)
+                {
+                    await AddWeatherToHistory(weatherDTO, city);
+                }
+
+                return weatherDTO;
             }
             catch (Exception ex)
             {
                 throw new Exception($"Unable to retrieve weather data: {ex.Message}");
             }
+        }
+
+        public async Task AddWeatherToHistory(WeatherDTO weatherDTO, string city)
+        {
+            var history = new History
+            {
+                City = weatherDTO.Name,
+                Country = weatherDTO.Sys.Country,
+                Title = weatherDTO.Weather[0].Main,
+                Description = weatherDTO.Weather[0].Description,
+                Icon = weatherDTO.Weather[0].Icon,
+                Temperature = weatherDTO.Main.Temp,
+                Pressure = weatherDTO.Main.Pressure,
+                Humidity = weatherDTO.Main.Humidity,
+                WindSpeed = weatherDTO.Wind.Speed,
+                Sunrise = DateTimeOffset.FromUnixTimeSeconds(weatherDTO.Sys.Sunrise).UtcDateTime,
+                Sunset = DateTimeOffset.FromUnixTimeSeconds(weatherDTO.Sys.Sunset).UtcDateTime,
+                Created = DateTime.UtcNow
+            };
+
+            _context.History.Add(history);
+            await _context.SaveChangesAsync();
         }
     }
 }

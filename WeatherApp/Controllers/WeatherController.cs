@@ -7,7 +7,7 @@ using WeatherApp.Repositories;
 
 namespace WeatherApp.Controllers
 {
-    [Route("api/weather")]
+    [Route("api")]
     [ApiController]
     public class WeatherController : ControllerBase
     {
@@ -19,7 +19,7 @@ namespace WeatherApp.Controllers
         }
 
         // GET: /api/weather/:city
-        [HttpGet("{city}")]
+        [HttpGet("/weather/{city}")]
         public async Task<ActionResult<WeatherDTO>> GetWeather(string city)
         {
             try
@@ -30,6 +30,26 @@ namespace WeatherApp.Controllers
             catch (Exception ex)
             {
                 return StatusCode(500, ex.Message);
+            }
+        }
+
+        // POST: /api/history
+        [HttpPost("history")]
+        public async Task<ActionResult> AddWeatherToHistory([FromBody] WeatherDTO weatherDTO, [FromQuery] string city)
+        {
+            try
+            {
+                if (weatherDTO == null)
+                {
+                    return BadRequest("Invalid weather data.");
+                }
+
+                await _weatherRepository.AddWeatherToHistory(weatherDTO, city);
+                return Ok("Weather data added to history.");
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Unable to add weather data to history: {ex.Message}");
             }
         }
     }
