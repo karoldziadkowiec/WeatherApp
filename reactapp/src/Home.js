@@ -61,7 +61,6 @@ const Home = () => {
           {error && <p>{error}</p>}
         </Modal.Body>
         <Modal.Footer className="justify-content-center">
-          <Button variant="success" onClick={handleClose}>Save</Button>
           <Button variant="dark" onClick={handleClose}>Close</Button>
         </Modal.Footer>
       </Modal>

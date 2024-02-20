@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System.Net.Http;
 using WeatherApp.Models.DTOs;
+using WeatherApp.Models.Entities;
 using WeatherApp.Repositories;
 
 namespace WeatherApp.Controllers
@@ -19,7 +20,7 @@ namespace WeatherApp.Controllers
         }
 
         // GET: /api/weather/:city
-        [HttpGet("/weather/{city}")]
+        [HttpGet("weather/{city}")]
         public async Task<ActionResult<WeatherDTO>> GetWeather(string city)
         {
             try

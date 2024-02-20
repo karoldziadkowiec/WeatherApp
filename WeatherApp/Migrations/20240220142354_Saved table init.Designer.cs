@@ -12,8 +12,8 @@ using WeatherApp.Database;
 namespace WeatherApp.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240220121856_Database init")]
-    partial class Databaseinit
+    [Migration("20240220142354_Saved table init")]
+    partial class Savedtableinit
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -25,7 +25,23 @@ namespace WeatherApp.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("WeatherApp.Models.Entities.History", b =>
+            modelBuilder.Entity("WeatherApp.Models.Entities.SavedWeather", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("WeatherId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Saved");
+                });
+
+            modelBuilder.Entity("WeatherApp.Models.Entities.WeatherData", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()

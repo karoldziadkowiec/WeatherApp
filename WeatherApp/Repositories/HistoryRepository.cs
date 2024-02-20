@@ -11,16 +11,15 @@ namespace WeatherApp.Repositories
     {
         private readonly AppDbContext _context;
 
-
         public HistoryRepository(AppDbContext context)
         {
             _context = context;
         }
 
-        public async Task<IQueryable<History>> GetAllHistory()
-            => await Task.FromResult(_context.History.OrderBy(h => h.Id));
+        public async Task<IQueryable<WeatherData>> GetAllHistory()
+            => await Task.FromResult(_context.History.OrderByDescending(h => h.Created));
 
-        public async Task<History> GetWeatherFromHistory(int historyId)
+        public async Task<WeatherData> GetWeatherFromHistory(int historyId)
             => await _context.History.FirstOrDefaultAsync(h => h.Id == historyId);
 
         public async Task<byte[]> GetHistoryCsvBytes()
@@ -73,7 +72,7 @@ namespace WeatherApp.Repositories
             }
         }
 
-        public async Task<IEnumerable<History>> SearchPartial(string searchTerm)
+        public async Task<IEnumerable<WeatherData>> SearchPartial(string searchTerm)
         {
             var searchedWeathers = await _context.History
                 .Where(h => h.City.Contains(searchTerm) || h.Country.Contains(searchTerm))

@@ -5,9 +5,9 @@ namespace WeatherApp.Repositories
 {
     public interface IHistoryRepository
     {
-        Task<IQueryable<History>> GetAllHistory();
-        Task<History> GetWeatherFromHistory(int historyId);
+        Task<IQueryable<WeatherData>> GetAllHistory();
+        Task<WeatherData> GetWeatherFromHistory(int historyId);
         Task<byte[]> GetHistoryCsvBytes();
-        Task<IEnumerable<History>> SearchPartial(string searchTerm);
+        Task<IEnumerable<WeatherData>> SearchPartial(string searchTerm);
     }
 }

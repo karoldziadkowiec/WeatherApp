@@ -9,6 +9,7 @@ namespace WeatherApp.Database
         {
         }
 
-        public DbSet<History> History { get; set; }
+        public DbSet<WeatherData> History { get; set; }
+        public DbSet<SavedWeather> Saved { get; set; }
     }
 }

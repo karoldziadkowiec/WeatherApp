@@ -43,24 +43,31 @@ namespace WeatherApp.Repositories
 
         public async Task AddWeatherToHistory(WeatherDTO weatherDTO, string city)
         {
-            var history = new History
+            try
             {
-                City = weatherDTO.Name,
-                Country = weatherDTO.Sys.Country,
-                Title = weatherDTO.Weather[0].Main,
-                Description = weatherDTO.Weather[0].Description,
-                Icon = weatherDTO.Weather[0].Icon,
-                Temperature = weatherDTO.Main.Temp,
-                Pressure = weatherDTO.Main.Pressure,
-                Humidity = weatherDTO.Main.Humidity,
-                WindSpeed = weatherDTO.Wind.Speed,
-                Sunrise = DateTimeOffset.FromUnixTimeSeconds(weatherDTO.Sys.Sunrise).UtcDateTime,
-                Sunset = DateTimeOffset.FromUnixTimeSeconds(weatherDTO.Sys.Sunset).UtcDateTime,
-                Created = DateTime.UtcNow
-            };
+                var weather = new WeatherData
+                {
+                    City = weatherDTO.Name,
+                    Country = weatherDTO.Sys.Country,
+                    Title = weatherDTO.Weather[0].Main,
+                    Description = weatherDTO.Weather[0].Description,
+                    Icon = weatherDTO.Weather[0].Icon,
+                    Temperature = weatherDTO.Main.Temp,
+                    Pressure = weatherDTO.Main.Pressure,
+                    Humidity = weatherDTO.Main.Humidity,
+                    WindSpeed = weatherDTO.Wind.Speed,
+                    Sunrise = DateTimeOffset.FromUnixTimeSeconds(weatherDTO.Sys.Sunrise).UtcDateTime,
+                    Sunset = DateTimeOffset.FromUnixTimeSeconds(weatherDTO.Sys.Sunset).UtcDateTime,
+                    Created = DateTime.UtcNow
+                };
 
-            _context.History.Add(history);
-            await _context.SaveChangesAsync();
+                _context.History.Add(weather);
+                await _context.SaveChangesAsync();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"An error occurred while adding weather: {ex.Message}");
+            }
         }
     }
 }

@@ -2,7 +2,7 @@
 
 namespace WeatherApp.Models.Entities
 {
-    public class History
+    public class WeatherData
     {
         [Key]
         public int Id { get; set; }

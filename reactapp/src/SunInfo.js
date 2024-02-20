@@ -39,7 +39,7 @@ const SunInfo = () => {
       <div className="centered-content">
       <h1>WeatherApp</h1>
       <h4>Sun information</h4>
-      <h5>Check the current sun information below!</h5>
+      <h5>Check the current sun details below.</h5>
       <input type="text" placeholder="Search city" value={city} onChange={handleInputChange} />
       <p><Button variant="warning" onClick={getWeather}>Search</Button></p>
       </div>

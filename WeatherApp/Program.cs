@@ -16,6 +16,7 @@ namespace WeatherApp
                 options.UseSqlServer(builder.Configuration.GetConnectionString("connection")));
             builder.Services.AddScoped<IWeatherRepository, WeatherRepository>();
             builder.Services.AddScoped<IHistoryRepository, HistoryRepository>();
+            builder.Services.AddScoped<ISavedRepository, SavedRepository>();
             builder.Services.AddHttpClient(); // IHttpClientFactory registration
 
             builder.Services.AddControllers();
