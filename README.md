@@ -21,7 +21,7 @@ Technologies used in the project:
     - **Swagger UI**
     - **Postman**
 - f r o n t e n d:
-  - **React**
+  - Framework: **React**
     - JavaScript
     - HTML
     - CSS
