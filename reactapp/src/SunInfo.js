@@ -53,8 +53,8 @@ const SunInfo = () => {
             <div>
               <img src={`http://openweathermap.org/img/w/${weatherData.weather[0].icon}.png`} alt="Weather Icon" />
               <b>{weatherData.main.temp}°C</b>
-              <p><b>Sunrise: {new Date(weatherData.sys.sunrise * 1000).toLocaleTimeString()}</b></p>
-              <p><b>Sunset: {new Date(weatherData.sys.sunset * 1000).toLocaleTimeString()}</b></p>
+              <p>Sunrise: <b>{new Date(weatherData.sys.sunrise * 1000).toLocaleTimeString()}</b></p>
+              <p>Sunset: <b>{new Date(weatherData.sys.sunset * 1000).toLocaleTimeString()}</b></p>
             </div>
           )}
           {error && <p>{error}</p>}
