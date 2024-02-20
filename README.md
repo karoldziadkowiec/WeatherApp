@@ -12,6 +12,9 @@ Technologies used in the project:
   - Repository and DTOs pattern
   - Configuration Management with AppSettings (to read Api Key)
   - ClosedXML
+- ORM: **Entity Framework Core**
+  - Migrations
+- Database: **Microsoft SQL Server**
 - **React**
   - JavaScript
   - HTML
@@ -25,9 +28,6 @@ Technologies used in the project:
   - **Postman**
 
 Technologies in development phase:
-- ORM: **Entity Framework Core**
-  - Migrations
-- Database: **Microsoft SQL Server**
 - Unit tests: **xUnit**
 
 Home page:
