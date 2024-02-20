@@ -11,10 +11,13 @@ Technologies used in the project:
   - LINQ Queries
   - Repository and DTOs pattern
   - Configuration Management with AppSettings (to read Api Key)
+  - ClosedXML
 - **React**
   - JavaScript
   - HTML
   - CSS
+  - React Bootstrap components
+  - React Router
   - Hooks
   - Multithreading (async/await)
 - API testing by:
@@ -25,5 +28,12 @@ Technologies in development phase:
 - ORM: **Entity Framework Core**
   - Migrations
 - Database: **Microsoft SQL Server**
-- **React Bootstrap**
 - Unit tests: **xUnit**
+
+Home page:
+
+![Home page](https://github.com/karoldziadkowiec/WeatherApp/blob/master/github-images/1.png)
+
+Sun Info page:
+
+![Sun Info page](https://github.com/karoldziadkowiec/WeatherApp/blob/master/github-images/2.png)
