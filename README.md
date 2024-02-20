@@ -4,7 +4,7 @@ The project is a web application for checking the current weather. It enables us
 
 Technologies used in the project:
 - b a c k e n d:
- - Framework: **ASP.NET Core Web API**
+  - Framework: **ASP.NET Core Web API**
     - REST API
   - **C#**
     - Json.NET
