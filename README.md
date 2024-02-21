@@ -1,8 +1,8 @@
 # WeatherApp
-
+## About project
 The project is a web application that allows users to search current weather conditions for selected cities around the world. The searched weather is automatically added to the database. There is an option to save a specific weather in the search history and to delete the weather later. The application fetches weather data from an external API using Json.NET: https://openweathermap.org. Additionally, unit tests have been conducted using xUnit tool.
 
-Technologies used in the project:
+## Technologies
 - b a c k e n d:
   - **ASP.NET Core Web API**
     - REST API
@@ -31,6 +31,7 @@ Technologies used in the project:
     - Hooks
     - Multithreading (async/await)
 
+## Images
 Home page:
 
 ![Home page](https://github.com/karoldziadkowiec/WeatherApp/blob/master/github-images/1.png)
