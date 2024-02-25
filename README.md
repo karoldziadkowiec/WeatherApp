@@ -29,7 +29,7 @@ The project is a web application that allows users to search current weather con
     - React Bootstrap components
     - React Router
     - Hooks
-    - Multithreading (async/await)
+    - Asynchronous programming (async/await)
 
 ## Images
 Home page:
