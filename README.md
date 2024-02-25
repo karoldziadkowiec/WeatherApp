@@ -8,7 +8,7 @@ The project is a web application that allows users to search current weather con
     - REST API
   - **C#**
     - Json.NET
-    - Multithreading (async/await)
+    - Asynchronous programming (async/await)
     - LINQ Queries
     - Repository and DTOs pattern
     - Configuration Management with AppSettings (to read Api Key)
