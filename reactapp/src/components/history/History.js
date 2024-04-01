@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Table, Modal, Button, Form } from 'react-bootstrap';
-import './History.css';
+import ServerURL from '../../services/server/ServerURL';
+import '../../styles/History.css';
 
 const History = () => {
   const [historyData, setHistoryData] = useState([]);
@@ -16,7 +17,8 @@ const History = () => {
 
   const fetchHistoryData = async () => {
     try {
-      const response = await fetch('https://localhost:7043/api/history');
+      const response = await fetch(`${ServerURL}/history`);
+
       if (response.ok) {
         const data = await response.json();
         setHistoryData(data);
@@ -30,7 +32,7 @@ const History = () => {
 
   const fetchSavedWeather = async () => {
     try {
-      const response = await fetch('https://localhost:7043/api/saved');
+      const response = await fetch(`${ServerURL}/saved`);
       if (response.ok) {
         const data = await response.json();
         setSavedWeather(data);
@@ -59,7 +61,7 @@ const History = () => {
 
   const handlePrintClick = async () => {
     try {
-      const response = await fetch('https://localhost:7043/api/history/csv');
+      const response = await fetch(`${ServerURL}/history/csv`);
       if (response.ok) {
         const blob = await response.blob();
         const url = window.URL.createObjectURL(new Blob([blob]));
@@ -84,7 +86,7 @@ const History = () => {
   const handleSearchSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await fetch(`https://localhost:7043/api/history/partial/${searchTerm}`);
+      const response = await fetch(`${ServerURL}/history/partial/${searchTerm}`);
       if (response.ok) {
         const data = await response.json();
         setHistoryData(data);
@@ -102,7 +104,7 @@ const History = () => {
 
   const handleSaveButtonClick = async (historyItem) => {
     try {
-      const response = await fetch('https://localhost:7043/api/saved', {
+      const response = await fetch(`${ServerURL}/saved`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

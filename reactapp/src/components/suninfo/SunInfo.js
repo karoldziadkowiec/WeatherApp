@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Modal, Button } from 'react-bootstrap';
-import './SunInfo.css';
+import ServerURL from '../../services/server/ServerURL';
+import '../../styles/SunInfo.css';
 
 const SunInfo = () => {
   const [city, setCity] = useState('');
@@ -14,7 +15,7 @@ const SunInfo = () => {
 
   const getWeather = async () => {
     try {
-      const response = await fetch(`https://localhost:7043/api/weather/${city}`);
+      const response = await fetch(`${ServerURL}/weather/${city}`);
 
       if (response.ok) {
         const data = await response.json();

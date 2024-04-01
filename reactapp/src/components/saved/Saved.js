@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Table, Modal, Button} from 'react-bootstrap';
-import './Saved.css';
+import ServerURL from '../../services/server/ServerURL';
+import '../../styles/Saved.css';
 
 const Saved = () => {
   const [savedData, setSavedData] = useState([]);
@@ -13,11 +14,11 @@ const Saved = () => {
 
   const fetchSavedData = async () => {
     try {
-      const response = await fetch('https://localhost:7043/api/saved');
+      const response = await fetch(`${ServerURL}/saved`);
       if (response.ok) {
         const data = await response.json();
         const fetchedData = await Promise.all(data.map(async (item) => {
-          const weatherResponse = await fetch(`https://localhost:7043/api/history/${item.weatherId}`);
+          const weatherResponse = await fetch(`${ServerURL}/history/${item.weatherId}`);
           if (weatherResponse.ok) {
             const weatherData = await weatherResponse.json();
             return {
@@ -66,7 +67,7 @@ const Saved = () => {
 
   const handlePrintClick = async () => {
     try {
-      const response = await fetch('https://localhost:7043/api/saved/csv');
+      const response = await fetch(`${ServerURL}/saved/csv`);
       if (response.ok) {
         const blob = await response.blob();
         const url = window.URL.createObjectURL(new Blob([blob]));
@@ -86,7 +87,7 @@ const Saved = () => {
 
   const handleRemoveButtonClick = async (savedItemId) => {
     try {
-      const response = await fetch(`https://localhost:7043/api/saved/${savedItemId}`, {
+      const response = await fetch(`${ServerURL}/saved/${savedItemId}`, {
         method: 'DELETE',
       });
 

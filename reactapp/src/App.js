@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
-import Navbar from './Navbar';
-import Footer from './Footer';
-import Home from './Home';
-import SunInfo from './SunInfo';
-import History from './History';
-import Saved from './Saved';
+import Navbar from './components/layout/Navbar';
+import Footer from './components/layout/Footer';
+import Home from './components/home/Home';
+import SunInfo from './components/suninfo/SunInfo';
+import History from './components/history/History';
+import Saved from './components/saved/Saved';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 const App = () => {
