@@ -17,7 +17,7 @@ The project is a web application that allows users to search current weather con
     - Migrations
   - Database: **Microsoft SQL Server**
     - One-to-one relationship
-  - Unit tests: **xUnit**
+  - Unit testing: **xUnit**
   - API testing by:
     - **Swagger UI**
     - **Postman**
