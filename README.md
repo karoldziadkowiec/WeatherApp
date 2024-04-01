@@ -10,8 +10,8 @@ The project is a web application that allows users to search current weather con
     - Json.NET
     - Asynchronous programming (async/await)
     - LINQ Queries
-    - Repository and DTOs pattern
-    - Configuration Management with AppSettings (to read Api Key)
+    - Dependency Injection, Repository, DTOs patterns
+    - Configuration management with appsettings.json (to read Api Key and database connection)
     - ClosedXML
   - ORM: **Entity Framework Core**
     - Migrations
