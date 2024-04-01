@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Modal, Button } from 'react-bootstrap';
-import ServerURL from '../../services/server/ServerURL';
+import ServerURL from '../../config/ServerURL';
 import '../../App.css';
 
 const Home = () => {

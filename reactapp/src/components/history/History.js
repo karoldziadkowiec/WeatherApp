@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Table, Modal, Button, Form } from 'react-bootstrap';
-import ServerURL from '../../services/server/ServerURL';
+import ServerURL from '../../config/ServerURL';
 import '../../styles/History.css';
 
 const History = () => {

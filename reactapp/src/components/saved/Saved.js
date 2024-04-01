@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Table, Modal, Button} from 'react-bootstrap';
-import ServerURL from '../../services/server/ServerURL';
+import ServerURL from '../../config/ServerURL';
 import '../../styles/Saved.css';
 
 const Saved = () => {
