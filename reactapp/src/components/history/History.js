@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Table, Modal, Button, Form } from 'react-bootstrap';
-import ServerURL from '../../config/ServerURL';
+import ApiURL from '../../constants/ApiConfig';
 import '../../styles/History.css';
 
 const History = () => {
@@ -17,7 +17,7 @@ const History = () => {
 
   const fetchHistoryData = async () => {
     try {
-      const response = await fetch(`${ServerURL}/history`);
+      const response = await fetch(`${ApiURL}/history`);
 
       if (response.ok) {
         const data = await response.json();
@@ -32,7 +32,7 @@ const History = () => {
 
   const fetchSavedWeather = async () => {
     try {
-      const response = await fetch(`${ServerURL}/saved`);
+      const response = await fetch(`${ApiURL}/saved`);
       if (response.ok) {
         const data = await response.json();
         setSavedWeather(data);
@@ -61,7 +61,7 @@ const History = () => {
 
   const handlePrintClick = async () => {
     try {
-      const response = await fetch(`${ServerURL}/history/csv`);
+      const response = await fetch(`${ApiURL}/history/csv`);
       if (response.ok) {
         const blob = await response.blob();
         const url = window.URL.createObjectURL(new Blob([blob]));
@@ -86,7 +86,7 @@ const History = () => {
   const handleSearchSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await fetch(`${ServerURL}/history/partial/${searchTerm}`);
+      const response = await fetch(`${ApiURL}/history/partial/${searchTerm}`);
       if (response.ok) {
         const data = await response.json();
         setHistoryData(data);
@@ -104,7 +104,7 @@ const History = () => {
 
   const handleSaveButtonClick = async (historyItem) => {
     try {
-      const response = await fetch(`${ServerURL}/saved`, {
+      const response = await fetch(`${ApiURL}/saved`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
